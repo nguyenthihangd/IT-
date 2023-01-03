@@ -46,7 +46,7 @@ class Bingo
     i = 1
     
     while i < row
-      temp = rand((15*i-14..15*i))
+      temp = rand((15*times-14..15*times))
       
       if values.include?(temp)
         i -= 1

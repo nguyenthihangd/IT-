@@ -1,12 +1,6 @@
 class Menu
   attr_accessor :name
   attr_accessor :price
-
-  def get_total_price(count)
-    total_price = price * count
-    total_price -= 10000 if count >= 3
-    "#{name} #{total_price}vnd"
-  end
 end
 
 menu1 = Menu.new

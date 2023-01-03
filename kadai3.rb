@@ -7,11 +7,6 @@ class Menu
     self.price = price
   end
   
-  def get_total_price(count)
-    total_price = price * count
-    total_price -= 10000 if count >= 3
-    "#{name} #{total_price}vnd"
-  end
 end
 
 class Drink < Menu
@@ -37,7 +32,7 @@ menus = [menu1, menu2, menu3, drink1, drink2]
 
 menus.each do |menu|
   if (menu.instance_of? Menu)
-  puts "#{menu.name} #{menu.price}vnd"
+   puts "#{menu.name} #{menu.price}vnd"
   else puts "#{menu.name} #{menu.price}vnd (#{menu.size}サイズ)"
   end
 end
