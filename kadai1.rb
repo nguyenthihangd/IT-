@@ -3,7 +3,7 @@ class Menu
  attr_accessor :price
   # get_total_priceメソッドを定義してください
   def get_total_price(count)
-    total_price = self.price * count - (count < 3 ? 0 : 10000) 
+    total_price = self.price * count - (count < 3 ? 0 : 10000)
     return "#{self.name} #{total_price}vnd"
   end
 end
