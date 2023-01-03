@@ -1,15 +1,6 @@
 class Bingo
-  def generate_rand(from_to)
-    num = rand(from_to)
-    if num < 10
-      return "#{num} "
-    else
-      return num
-    end
-  end
-
   def create_row(row)
-    row == 2 ? " #{generate_rand(1..15)} | #{generate_rand(16..30)} |    | #{generate_rand(46..60)} | #{generate_rand(61..75)} " : " #{generate_rand(1..15)} | #{generate_rand(16..30)} | #{generate_rand(31..45)} | #{generate_rand(46..60)} | #{generate_rand(61..75)} "
+    row == 2 ? " #{rand(1..15).to_s.ljust(2)} | #{rand(16..30).to_s.ljust(2)} |    | #{rand(46..60).to_s.ljust(2)} | #{rand(61..75).to_s.ljust(2)} " : " #{rand(1..15).to_s.ljust(2)} | #{rand(16..30).to_s.ljust(2)} | #{rand(31..45).to_s.ljust(2)} | #{rand(46..60).to_s.ljust(2)} | #{rand(61..75).to_s.ljust(2)} "
   end
 
   def print_board
