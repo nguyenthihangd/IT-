@@ -4,8 +4,10 @@ class Menu
   # get_total_priceメソッドを定義してください
   def get_total_price(count)
     total_price = price * count
-    total_price -= 10_000 if count > 3
-    "#{name} #{total_price}vnd"
+    if count >= 3
+      total_price -= 10_000 
+    end
+    return "#{name} #{total_price}vnd"
   end
 end
 
@@ -17,3 +19,7 @@ menu1.price = 30_000
 puts menu1.get_total_price(2)
 puts menu1.get_total_price(3)
 puts menu1.get_total_price(5)
+
+# namikako
+# kakukako
+# marukako
