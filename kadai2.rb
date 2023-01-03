@@ -8,14 +8,14 @@ class Menu
 end
 
 
-menu1 = Menu.new("Phở", "30,000vnd")
-menu2 = Menu.new("Bún chả", "40,000vnd")
-menu3 = Menu.new("Bánh mì", "20,000vnd")
+menu1 = Menu.new("Phở", 300000)
+menu2 = Menu.new("Bún chả", 400000)
+menu3 = Menu.new("Bánh mì", 200000)
 
 
 menus = [menu1, menu2, menu3]
 
 
 menus.each do |menu|
-  puts "#{menu.name} #{menu.price}"
+  puts "#{menu.name} #{menu.price}vnd"
 end
