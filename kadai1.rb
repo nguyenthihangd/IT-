@@ -5,6 +5,8 @@ class Menu
   def get_total_price(count)
     total_price = @price * count
     total_price -= 10_000 if count >= 3
+    #cứ 3 bát thì giảm 10000
+    #total_price -= 10_000 * (count / 3)
     "#{@name} #{total_price}vnd"
   end
 end
