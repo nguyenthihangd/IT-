@@ -47,15 +47,14 @@ class Bingo
     
     while i < row
       temp = rand((15*times-14..15*times))
-      
+      temp = temp.to_s
+      if temp.length < 2
+        temp = " " + temp
+      end
       if values.include?(temp)
         i -= 1
       else 
-          temp = temp.to_s
-          if temp.length < 2
-            temp = " " + temp
-          end
-          values << temp
+        values << temp
       end
       
       i += 1
