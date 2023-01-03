@@ -1,9 +1,9 @@
 class Menu
-  attr_reader :name, :price
+  attr_accessor :name, :price
 
   def initialize(name, price)
-    @name = name
-    @price = price
+    self.name = name
+    self.price = price
   end
 end
 
@@ -14,6 +14,7 @@ menu3 = Menu.new("Bánh mì", "20,000vnd")
 
 
 menus = [menu1, menu2, menu3]
+
 
 menus.each do |menu|
   puts "#{menu.name} #{menu.price}"
